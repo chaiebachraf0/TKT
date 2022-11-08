@@ -1,0 +1,67 @@
+
+<br>
+
+ <a    [routerLink]="[
+ ''
+]"
+>  <button type="button" class="btn btn-outline-primary">Return</button>
+</a>
+                <ng-container *ngIf="condition; else top">
+                    <table class="table table-striped " style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Result</th>
+                                <th scope="col">Sector</th>
+                                <th scope="col">Siren</th>
+                        
+                        
+                              </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">{{biz.id}}</th>
+                            <td>{{biz.name}}</td>
+                            <td>{{biz.results}}</td>
+                            <td>{{biz.sector}}</td>
+                            <td>{{biz.siren}}</td>
+                    
+                          </tr>
+                          <tr>
+                          
+                        </tbody>
+                      </table>
+                  </ng-container>
+                  <ng-template #top>
+                    <table class="table table-striped " style="width: 100%;">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">business</th>
+                            <th scope="col">Chiffre d'affaire</th>
+                            <th scope="col">ebitda</th>
+                            <th scope="col">loss</th>
+                            <th scope="col">margin</th>
+                            <th scope="col">year</th>
+                    
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">{{biz.id}}</th>
+                            <td>{{biz.business}}</td>
+                            <td>{{biz.ca}}</td>
+                            <td>{{biz.ebitda}}</td>
+                            <td>{{biz.loss}}</td>
+                            <td>{{biz.margin}}</td>
+                            <td>{{biz.year}}</td>
+                    
+                          </tr>
+                          <tr>
+                          
+                        </tbody>
+                      </table>
+                  </ng-template>
+
+

@@ -1,0 +1,83 @@
+ 
+ <div class="row">
+
+
+ <div class="col-6 container">
+
+ <table class="table table-striped " style="width: 100%;">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Result</th>
+        <th scope="col">Sector</th>
+        <th scope="col">Siren</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Obiz of biz">
+        <th scope="row">{{Obiz.id}}</th>
+        <td>{{Obiz.name}}</td>
+        <td>{{Obiz.results}}</td>
+        <td>{{Obiz.sector}}</td>
+        <td>{{Obiz.siren}}</td>
+<td> <a    [routerLink]="[
+    '/list-business/' + Obiz.id
+  ]"
+  [queryParams]="{
+    business: Obiz.id
+
+
+  }">  <button type="button" class="btn btn-outline-primary">Datails</button>
+</a></td>
+      </tr>
+      <tr>
+      
+    </tbody>
+  </table>
+</div>
+<div class="col-5">
+
+  <table class="table table-striped " style="width: 100%;">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">business</th>
+        <th scope="col">Chiffre d'affaire</th>
+        <th scope="col">ebitda</th>
+        <th scope="col">loss</th>
+        <th scope="col">margin</th>
+        <th scope="col">year</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let oresult of result">
+        <th scope="row">{{oresult.id}}</th>
+        <td>{{oresult.business}}</td>
+        <td>{{oresult.ca}}</td>
+        <td>{{oresult.ebitda}}</td>
+        <td>{{oresult.loss}}</td>
+        <td>{{oresult.margin}}</td>
+        <td>{{oresult.year}}</td>
+
+        <td> <a    [routerLink]="[
+            '/list-result/' + oresult.id
+          ]"
+          [queryParams]="{
+            result: oresult.id
+        
+        
+          }">  <button type="button" class="btn btn-outline-primary">Datails</button>
+
+        </a></td>       
+      </tr>
+      <tr>
+      
+    </tbody>
+  </table> 
+</div>
+
+</div>
